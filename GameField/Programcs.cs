@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Net.Sockets;
 
-namespace Server
+
+namespace GameField
 {
-    class Program
+    class Programcs
     {
         static void Main(string[] args)
         {
-            //Hero hero = new Hero("Miracle", 1, 1);
-            //hero.Health = 0;
-            //hero.Die();
-            //Console.ReadKey(true);
+            Server server = new Server("127.0.0.1", 1024);
+            server.ServerStart();
         }
+
+    
     }
 }
+
+

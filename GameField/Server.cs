@@ -37,6 +37,7 @@ namespace GameField
                     socket.Send(Encoding.ASCII.GetBytes("server on"));
                     socket.Shutdown(SocketShutdown.Both);
                     Console.WriteLine("Отключился: " + socket.RemoteEndPoint.ToString() + " Time: " + DateTime.Now.ToString());
+                    socket.Close();
                 }
             }
             catch (SocketException e)
